@@ -212,7 +212,6 @@ Files named `favicon.png` and `apple-touch-icon.png` are used as favicon and App
 - [blog.millefeuille42.fr](https://blog.millefeuille42.fr)
 - [blog.pansi21.xyz](https://blog.pansi21.xyz)
 - [blog.thundernetwork.org](https://blog.thundernetwork.org)
-- [blog2.maki0419.com](https://blog2.maki0419.com)
 - [cabysm.github.io](https://cabysm.github.io)
 - [daveparr.info](https://www.daveparr.info)
 - [davepoltorak.com](https://davepoltorak.com)
@@ -256,6 +255,7 @@ Files named `favicon.png` and `apple-touch-icon.png` are used as favicon and App
 - [winnydows.com](https://winnydows.com)
 - [zlog.si-on.top](https://zlog.si-on.top)
 - [zstg.is-a.dev](https://zstg.is-a.dev)
+- [琳.tw](https://xn--jgy.tw/)
 - Yours? <small>(feel free to [contact me](https://daudix.one/find/#contacts) or send a pull request)</small>
 
 </details>
