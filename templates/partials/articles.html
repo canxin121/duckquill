@@ -53,7 +53,7 @@
 						{%- for name, taxon in page.taxonomies %}
 							<small>
 								<ul class="tags">
-									<a class="tag" href="{{- get_url(path='$TAXON', lang=lang) | replace(from="$TAXON", to=name) | lower -}}">{{ name }}:</a>
+									<a class="tag" href="{{- get_url(path=name, lang=lang) | lower -}}">{{ macros_translate::translate(key=name, default=name, language_strings=language_strings) }}:</a>
 									{%- for item in taxon -%}
 										<li><a class="tag" href="{{ get_taxonomy_url(kind=name, name=item, lang=lang) }}">{{ item }}</a></li>
 									{%- endfor %}
