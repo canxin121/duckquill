@@ -4,8 +4,7 @@ language_name = "简体中文"
 # (post publication date, tag posts list...).
 # Not used in comments, "date_locale" is used instead.
 # See https://docs.rs/chrono/0.4.31/chrono/format/strftime/index.html
-# TODO: Update date format to match the Chinese format.
-date_format = "%B %d, %Y"
+date_format = "%Y 年 %m 月 %d 日"
 date_locale = "zh_CN"
 
 # Menu items.
@@ -16,7 +15,7 @@ Demo = "演示"
 Mods = "模组"
 Coffee = "赞助"
 
-all_tags = "查看所有标签"
+all_taxa = "查看所有$TAXON"
 archived = "归档"
 author = "作者"
 author_conjunction = "和"
@@ -59,7 +58,7 @@ one_tags = "共有 $NUMBER 个标签"
 open_post = "打开帖子"
 poor = "冷清"
 posts = "共有 $NUMBER 篇文章"
-posts_with_tag = "带有 $TAG 标签的文章"
+posts_with_taxon = "属于 $TERM $TAXON的文章"
 powered_by = "由 $ZOLA 和 $DUCKQUILL 强力驱动"
 previous = "上一篇"
 published = "发布于"
