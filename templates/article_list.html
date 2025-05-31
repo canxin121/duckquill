@@ -8,6 +8,8 @@
 	{%- set number_of_posts = paginator.total_pages -%}
 {%- elif section.pages -%}
 	{%- set number_of_posts = section.pages | length -%}
+{%- else -%}
+	{%- set number_of_posts = 0 -%}
 {%- endif -%}
 
 <h1>{{ section.title }}</h1>
