@@ -112,6 +112,7 @@
 				transform: translateY(-50%);
 				opacity: var(--disabled-opacity);
 				mask-size: cover;
+				-webkit-mask-size: cover;
 				transition: var(--transition-longer);
 				inset-block-start: 50%;
 				inset-inline-end: -3rem;

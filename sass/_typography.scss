@@ -252,6 +252,8 @@ details {
 			display: inline-block;
 			vertical-align: -0.125em;
 			mask-image: var(--icon-down);
+			mask-size: cover;
+			-webkit-mask-size: cover;
 			transition: var(--transition);
 			margin-inline-end: 0.25rem;
 			background-color: currentColor;

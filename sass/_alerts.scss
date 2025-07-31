@@ -34,6 +34,7 @@
 		position: absolute;
 		mask-image: var(--icon);
 		mask-size: cover;
+		-webkit-mask-size: cover;
 		margin-inline-end: 0.25rem;
 		inset-block-start: 0.25rem;
 		inset-inline-start: 0.75rem;
