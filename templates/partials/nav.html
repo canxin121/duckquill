@@ -73,7 +73,7 @@
 			{%- if config.languages | length > 0 %}
 				{%- include "partials/language_switcher.html" %}
 			{%- endif -%}
-			{%- if config.extra.default_theme or config.extra.nav.show_theme_switcher  %}
+			{%- if config.extra.default_theme and config.extra.nav.show_theme_switcher != false or config.extra.nav.show_theme_switcher %}
 				<li id="theme-switcher">
 					<details class="closable">
 						<summary class="circle" title="{{ macros_translate::translate(key='theme', default='Theme', language_strings=language_strings) }}">
