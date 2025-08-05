@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased](https://codeberg.org/daudix/duckquill/compare/v6.3.0...main)
 
-- Add support for GitHub-style alerts introduced in Zola 0.21.1 (#175).
+- Add support for GitHub-style alerts introduced in Zola 0.21.0 (#175).
 - Respect `extra.nav.show_theme_switcher` setting even if `extra.default_theme` is set (#173).
 - Store icons in a separate stylesheet (#171).
 - Use font size defined in browser by user instead of hardcoded 16px size.
