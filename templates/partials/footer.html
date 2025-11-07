@@ -53,7 +53,7 @@
 	{%- endif %}
 
 	{%- if config.extra.footer.socials %}
-		<ul id="socials">
+		<ul id="external-links">
 			{%- for link in config.extra.footer.socials %}
 				<li>
 					<a href="{{ link.url | safe }}" rel="{{ rel_attributes }} me" title="{{ link.name }}">
