@@ -1,6 +1,6 @@
 // Based on https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
 document.addEventListener("DOMContentLoaded", function () {
-	let blocks = document.querySelectorAll("pre[class='giallo']");
+	let blocks = Array.from(document.querySelectorAll("pre.giallo")).filter(block => !block.closest("div.crt"));
 
 	blocks.forEach((block) => {
 		if (navigator.clipboard) {
