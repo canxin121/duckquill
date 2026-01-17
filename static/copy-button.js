@@ -1,12 +1,12 @@
 // Based on https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html
 document.addEventListener("DOMContentLoaded", function () {
-	let blocks = document.querySelectorAll("pre[class^='language-']");
+	let blocks = document.querySelectorAll("pre[class='giallo']");
 
 	blocks.forEach((block) => {
 		if (navigator.clipboard) {
 			// Code block header title
 			let title = document.createElement("span");
-			let lang = block.getAttribute("data-name") || block.getAttribute("data-lang");
+			let lang = block.querySelector("code").getAttribute("data-name") || block.querySelector("code").getAttribute("data-lang");
 			title.innerHTML = lang;
 
 			// Copy button icon
