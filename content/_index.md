@@ -219,7 +219,7 @@ Files named `favicon.png` and `apple-touch-icon.png` are used as favicon and App
 - [gregorni.gitlab.io](https://gregorni.gitlab.io)
 - [harrypotterexplained.com](http://harrypotterexplained.com)
 - [hyouteki.github.io](https://hyouteki.github.io)
-- [ikergimenez.neocities.org](https://ikergimenez.neocities.org)
+- [ikergimenez.com](https://ikergimenez.com)
 - [kaipeacock.com](https://kaipeacock.com)
 - [larrabyte.dev](https://larrabyte.dev)
 - [lifailon.github.io](https://lifailon.github.io)
