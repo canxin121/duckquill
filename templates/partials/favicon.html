@@ -3,6 +3,8 @@
 	{{ get_url(path=page.colocated_path ~ page.extra.favicon) }}
 {%- elif section.extra.favicon -%}
 	{{ get_url(path=section.colocated_path ~ section.extra.favicon) }}
+{%- elif config.extra.favicon -%}
+	{{ get_url(path=config.extra.favicon) }}
 {%- else -%}
 	{{ get_url(path='favicon.png') }}
 {%- endif -%}" />
@@ -12,6 +14,8 @@
 	{{ get_url(path=page.colocated_path ~ page.extra.apple_touch_icon) }}
 {%- elif section.extra.apple_touch_icon -%}
 	{{ get_url(path=section.colocated_path ~ section.extra.apple_touch_icon) }}
+{%- elif config.extra.apple_touch_icon -%}
+	{{ get_url(path=config.extra.apple_touch_icon) }}
 {%- else -%}
 	{{ get_url(path='apple-touch-icon.png') }}
 {%- endif -%}" />

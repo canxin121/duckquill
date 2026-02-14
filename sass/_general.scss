@@ -89,19 +89,14 @@ main {
 #sidebar {
 	display: flex;
 	position: sticky;
-	top: 0;
+	top: 4.75rem;
+	align-items: flex-start;
 	grid-area: sidebar;
-	opacity: 0.2;
 	transition: var(--transition);
-	height: 100vh;
-
-	&:hover {
-		opacity: 1;
-	}
+	height: calc(100vh - 4.75rem);
 
 	@media only screen and (max-width: 1200px) {
 		position: static;
-		opacity: 1;
 		margin-block-start: 4.25rem;
 		margin-block-end: -4.25rem;
 		padding: 0;
@@ -117,7 +112,13 @@ main {
 		-webkit-mask-image: var(--mask);
 		mask-image: var(--mask);
 		padding: 1rem;
+		padding-block-end: 2rem;
+		width: min(22rem, 100%);
 		overflow: auto;
+
+		@media only screen and (max-width: 1200px) {
+			width: 100%;
+		}
 	}
 
 	& + main {

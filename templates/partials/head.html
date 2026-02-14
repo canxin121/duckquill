@@ -75,6 +75,18 @@
 		{%- set scripts = scripts | concat(with=["copy-button.js"]) %}
 	{%- endif %}
 
+	{%- if config.extra.media_enhancements is not defined or config.extra.media_enhancements %}
+		{%- set scripts = scripts | concat(with=["media.js"]) %}
+	{%- endif %}
+
+	{%- if config.extra.show_share_button %}
+		{%- set scripts = scripts | concat(with=["share.js"]) %}
+	{%- endif %}
+
+	{%- if config.extra.issues_url %}
+		{%- set scripts = scripts | concat(with=["issue.js"]) %}
+	{%- endif %}
+
 	{%- if config.extra.goatcounter %}
 		{%- set scripts = scripts | concat(with=["count.js"]) %}
 	{%- endif %}

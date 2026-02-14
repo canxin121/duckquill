@@ -74,10 +74,11 @@
 
 	<div id="buttons-container">
 		{%- if page.extra.toc and page.toc | length > 0 -%}
-			<details id="toc" class="closable">
+			<details id="toc" class="closable" data-close-on-outside="false">
 				<summary title="{{ macros_translate::translate(key='table_of_contents', default='Table of Contents', language_strings=language_strings) }}"><i class="icon"></i></summary>
 				<div>
 					<strong class="title">{{ macros_translate::translate(key="table_of_contents", default="Table of Contents", language_strings=language_strings) }}</strong>
+					<p class="toc-current" data-toc-current aria-live="polite"></p>
 					<div>
 						<{{ list_element }}>
 							{%- for h1 in page.toc -%}
@@ -118,10 +119,22 @@
 		{%- endif -%}
 		<a id="go-to-top" href="#top" title="{{ macros_translate::translate(key='go_to_top', default='Go to Top', language_strings=language_strings) }}"><i class="icon"></i></a>
 		{%- if config.extra.show_share_button -%}
-			<a id="share" href="https://shareopenly.org/share/?url={{ page.permalink }}{% if page.description %}&text={{ page.description | urlencode }}{% endif %}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='share', default='Share', language_strings=language_strings) }}"><i class="icon"></i></a>
+			{%- include "partials/share.html" -%}
 		{%- endif -%}
 		{%- if config.extra.issues_url -%}
-			<a id="issue" href="{{ config.extra.issues_url }}" rel="{{ rel_attributes }}" title="{{ macros_translate::translate(key='file_an_issue', default='File an Issue', language_strings=language_strings) }}"><i class="icon"></i></a>
+			<a
+				id="issue"
+				href="{{ config.extra.issues_url }}"
+				rel="{{ rel_attributes }}"
+				data-issue-url="{{ config.extra.issues_url }}"
+				data-issue-title="{{ page.title | default(value=config.title) }}"
+				data-issue-link="{{ page.permalink }}"
+				data-issue-description="{{ page.description | default(value='') }}"
+				data-issue-language="{{ lang }}"
+				data-issue-date="{{ page.date | default(value='') }}"
+				data-issue-updated="{{ page.updated | default(value='') }}"
+				title="{{ macros_translate::translate(key='file_an_issue', default='File an Issue', language_strings=language_strings) }}"
+			><i class="icon"></i></a>
 		{%- endif -%}
 	</div>
 

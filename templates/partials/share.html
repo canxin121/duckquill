@@ -1,0 +1,48 @@
+{%- set share_title = page.title | default(value=config.title) -%}
+{%- set share_text = page.description | default(value=share_title) -%}
+{%- set share_url = page.permalink -%}
+{%- set share_title_encoded = share_title | urlencode -%}
+{%- set share_text_encoded = share_text | urlencode -%}
+{%- set share_url_encoded = share_url | urlencode -%}
+
+<details id="share" class="closable">
+	<summary title="{{ macros_translate::translate(key='share', default='Share', language_strings=language_strings) }}"><i class="icon"></i></summary>
+	<div>
+		<strong class="title">{{ macros_translate::translate(key='share', default='Share', language_strings=language_strings) }}</strong>
+		<div
+			id="share-panel"
+			data-share-panel
+			data-share-copied="{{ macros_translate::translate(key='share_copied', default='Link copied', language_strings=language_strings) }}"
+			data-share-copy-failed="{{ macros_translate::translate(key='share_copy_failed', default='Could not copy link', language_strings=language_strings) }}"
+			data-share-native-failed="{{ macros_translate::translate(key='share_native_failed', default='System share is unavailable', language_strings=language_strings) }}"
+		>
+			<div class="share-actions">
+				<button type="button" class="share-action" data-share-native data-share-title="{{ share_title }}" data-share-text="{{ share_text }}" data-share-url="{{ share_url }}">
+					{{ macros_translate::translate(key='share_native', default='System share', language_strings=language_strings) }}
+				</button>
+				<button type="button" class="share-action" data-share-copy data-share-url="{{ share_url }}">
+					{{ macros_translate::translate(key='share_copy_link', default='Copy link', language_strings=language_strings) }}
+				</button>
+			</div>
+
+			<p class="share-status" data-share-status aria-live="polite"></p>
+
+			<div class="share-links">
+				<a class="share-link" href="https://service.weibo.com/share/share.php?url={{ share_url_encoded }}&title={{ share_text_encoded }}" rel="{{ rel_attributes }}" target="_blank">Weibo</a>
+				<a class="share-link" href="https://connect.qq.com/widget/shareqq/index.html?url={{ share_url_encoded }}&title={{ share_title_encoded }}&summary={{ share_text_encoded }}&site={{ config.title | urlencode }}" rel="{{ rel_attributes }}" target="_blank">QQ</a>
+				<a class="share-link" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url={{ share_url_encoded }}&title={{ share_title_encoded }}&summary={{ share_text_encoded }}&site={{ config.title | urlencode }}" rel="{{ rel_attributes }}" target="_blank">QZone</a>
+				<a class="share-link" href="https://www.douban.com/share/service?href={{ share_url_encoded }}&name={{ share_title_encoded }}&text={{ share_text_encoded }}" rel="{{ rel_attributes }}" target="_blank">Douban</a>
+				<a class="share-link" href="https://api.qrserver.com/v1/create-qr-code/?size=320x320&data={{ share_url_encoded }}" rel="{{ rel_attributes }}" target="_blank">{{ macros_translate::translate(key='share_wechat_qr', default='WeChat QR', language_strings=language_strings) }}</a>
+				<a class="share-link" href="https://twitter.com/intent/tweet?url={{ share_url_encoded }}&text={{ share_text_encoded }}" rel="{{ rel_attributes }}" target="_blank">X</a>
+				<a class="share-link" href="https://www.linkedin.com/sharing/share-offsite/?url={{ share_url_encoded }}" rel="{{ rel_attributes }}" target="_blank">LinkedIn</a>
+				<a class="share-link" href="https://www.reddit.com/submit?url={{ share_url_encoded }}&title={{ share_title_encoded }}" rel="{{ rel_attributes }}" target="_blank">Reddit</a>
+				<a class="share-link" href="https://t.me/share/url?url={{ share_url_encoded }}&text={{ share_text_encoded }}" rel="{{ rel_attributes }}" target="_blank">Telegram</a>
+				<a class="share-link" href="https://api.whatsapp.com/send?text={{ share_title_encoded }}%20{{ share_url_encoded }}" rel="{{ rel_attributes }}" target="_blank">WhatsApp</a>
+				<a class="share-link" href="https://www.facebook.com/sharer/sharer.php?u={{ share_url_encoded }}" rel="{{ rel_attributes }}" target="_blank">Facebook</a>
+				<a class="share-link" href="mailto:?subject={{ share_title_encoded }}&body={{ share_text_encoded }}%0A{{ share_url_encoded }}">Email</a>
+			</div>
+
+			<p class="share-hint">{{ macros_translate::translate(key='share_wechat_hint', default='WeChat and some mobile apps may require copying the link or using system share.', language_strings=language_strings) }}</p>
+		</div>
+	</div>
+</details>

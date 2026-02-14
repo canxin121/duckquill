@@ -47,4 +47,11 @@
 
 {%- set video_attributes = video_attributes | join(sep=" ") -%}
 
-<video class="{{ video_classes }}" src="{{ url }}" {%- if alt -%}aria-title="{{ alt }}"{%- endif -%} {{ video_attributes }}></video>
+<video
+	class="{{ video_classes }}"
+	src="{{ url }}"
+	{%- if alt -%} aria-label="{{ alt }}"{%- endif -%}
+	{%- if poster -%} poster="{{ poster }}"{%- endif -%}
+	preload="{{ preload | default(value='metadata') }}"
+	{{ video_attributes }}
+></video>

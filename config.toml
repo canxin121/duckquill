@@ -133,11 +133,15 @@ source_url = "https://codeberg.org/daudix/duckquill"
 # that have the language set.
 # See https://www.getzola.org/documentation/content/syntax-highlighting/
 show_copy_button = true
+# Whether to enable enhanced media experience:
+# image lightbox gallery + richer video controls.
+media_enhancements = true
 # Whether to show estimated read time in posts.
 show_reading_time = true
 #
 # Whether to show a share button in article's quick actions.
-# Uses https://shareopenly.org.
+# Opens a multi-platform share panel,
+# plus system share and copy-link helpers when available.
 show_share_button = true
 # Whether to show the backlinks button for linked articles in the article's quick actions
 show_backlinks = true
