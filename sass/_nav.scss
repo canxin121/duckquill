@@ -125,6 +125,11 @@
 			gap: 0.25rem;
 			margin: 0;
 			padding: 0;
+
+			@media only screen and (max-width: 480px) {
+				justify-content: center;
+				align-items: center;
+			}
 		}
 
 		li {
@@ -133,9 +138,37 @@
 			padding: 0;
 			list-style: none;
 
+			&.nav-mobile-break {
+				display: none;
+			}
+
 			@media only screen and (max-width: 480px) {
-				&:not(:has(.circle)) {
+				&.nav-mobile-break {
+					display: block;
+					order: 2;
 					flex: 0 0 100%;
+					width: 100%;
+					height: 0;
+					pointer-events: none;
+				}
+
+				&:not(.divider):not(.nav-mobile-break):not(:has(.circle)) {
+					order: 1;
+					flex: 0 1 auto;
+					min-width: 0;
+
+					a,
+					summary {
+						flex: 0 1 auto;
+						white-space: nowrap;
+					}
+				}
+
+				&:has(.circle) {
+					order: 3;
+					flex: 1 1 0;
+					justify-content: center;
+					min-width: 2.5rem;
 				}
 			}
 		}
