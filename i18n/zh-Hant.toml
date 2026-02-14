@@ -11,9 +11,11 @@ date_locale = "zh_TW"
 # Should match the names in config.extra.nav.links and config.extra.footer.links.
 Links = "連結"
 Blog = "部落格"
+Friends = "友鏈"
 Demo = "展示"
 Mods = "模組"
 Coffee = "贊助"
+About = "關於"
 
 alert_caution = "注意"
 alert_important = "重要"
