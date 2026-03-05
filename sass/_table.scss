@@ -22,3 +22,17 @@ table {
 		}
 	}
 }
+
+@media only screen and (max-width: 720px) {
+	table {
+		display: block;
+		max-width: 100%;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	th,
+	td {
+		white-space: nowrap;
+	}
+}

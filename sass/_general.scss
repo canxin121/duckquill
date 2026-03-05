@@ -2,6 +2,10 @@
 	box-sizing: border-box;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 :root {
 	scroll-behavior: smooth;
 	scrollbar-color: var(--accent-color) transparent;
@@ -23,6 +27,7 @@ body {
 	font-family: var(--font-system-ui), var(--font-emoji);
 	text-wrap: pretty;
 	overflow-wrap: break-word;
+	overflow-x: hidden;
 
 	&:has(#sidebar) {
 		grid-template-columns: 1fr min(var(--container-width), 90%) 1fr;
