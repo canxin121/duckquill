@@ -2,10 +2,6 @@
 	box-sizing: border-box;
 }
 
-html {
-	overflow-x: hidden;
-}
-
 :root {
 	scroll-behavior: smooth;
 	scrollbar-color: var(--accent-color) transparent;
@@ -19,6 +15,7 @@ body {
 		"nav"
 		"main"
 		"footer";
+	grid-template-columns: minmax(0, 1fr);
 	margin: 0;
 	background-color: var(--bg-color);
 	min-height: 100vh;
@@ -27,7 +24,6 @@ body {
 	font-family: var(--font-system-ui), var(--font-emoji);
 	text-wrap: pretty;
 	overflow-wrap: break-word;
-	overflow-x: hidden;
 
 	&:has(#sidebar) {
 		grid-template-columns: 1fr min(var(--container-width), 90%) 1fr;
@@ -89,6 +85,7 @@ main {
 	margin: 4.25rem auto 4rem;
 	width: calc(100% - 2rem);
 	max-width: var(--container-width);
+	min-width: 0;
 }
 
 #sidebar {
@@ -132,6 +129,7 @@ main {
 		margin-block-start: 4.25rem;
 		margin-block-end: 4rem;
 		width: auto;
+		min-width: 0;
 	}
 }
 
